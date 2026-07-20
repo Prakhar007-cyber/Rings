@@ -1,0 +1,109 @@
+@import "tailwindcss";
+
+@theme {
+  --color-noir: #0b0908;
+  --color-noir-soft: #14100d;
+  --color-noir-warm: #1c1613;
+  --color-ivory: #f5f1ea;
+  --color-ivory-dim: #cfc8bc;
+  --color-champagne: #c6a15b;
+  --color-champagne-soft: #e2c891;
+  --color-gold-deep: #8a6a33;
+
+  --font-serif: var(--font-cormorant), "Cormorant", Georgia, serif;
+  --font-sans: var(--font-montserrat), "Montserrat", system-ui, sans-serif;
+}
+
+html {
+  background-color: var(--color-noir);
+}
+
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+body {
+  background-color: var(--color-noir);
+  color: var(--color-ivory);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+::selection {
+  background: rgba(198, 161, 91, 0.35);
+  color: var(--color-ivory);
+}
+
+/* Thin elegant scrollbar */
+::-webkit-scrollbar {
+  width: 5px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-noir);
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(198, 161, 91, 0.4);
+}
+
+.text-stroke-ivory {
+  -webkit-text-stroke: 1px rgba(245, 241, 234, 0.28);
+  color: transparent;
+}
+
+.text-stroke-champagne {
+  -webkit-text-stroke: 1px rgba(198, 161, 91, 0.45);
+  color: transparent;
+}
+
+/* Grain overlay for cinematic texture */
+.grain::after {
+  content: "";
+  position: fixed;
+  inset: -50%;
+  width: 200%;
+  height: 200%;
+  pointer-events: none;
+  z-index: 90;
+  opacity: 0.05;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  animation: grain-shift 9s steps(6) infinite;
+}
+
+@keyframes grain-shift {
+  0%, 100% { transform: translate(0, 0); }
+  20% { transform: translate(-3%, 2%); }
+  40% { transform: translate(2%, -3%); }
+  60% { transform: translate(-2%, -2%); }
+  80% { transform: translate(3%, 3%); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .grain::after {
+    animation: none;
+  }
+}
+
+/* Fine hairline divider */
+.hairline {
+  background: linear-gradient(
+    to right,
+    transparent,
+    rgba(198, 161, 91, 0.5),
+    transparent
+  );
+  height: 1px;
+}
