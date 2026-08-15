@@ -71,7 +71,7 @@ export default function Moment() {
       ))}
 
       {/* Cinematic grade */}
-      <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-noir/60 via-noir/10 to-noir/70" />
+      <div className="pointer-events-none absolute inset-0 bg-linear-to-b from-noir/60 via-noir/10 to-noir/70" />
 
       <div className="moment-heading absolute inset-x-0 bottom-0 z-10 pb-20 text-center opacity-0">
         <p className="mb-5 text-[10px] tracking-[0.5em] text-champagne uppercase">

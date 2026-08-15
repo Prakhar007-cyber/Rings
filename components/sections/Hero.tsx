@@ -129,7 +129,7 @@ export default function Hero() {
 
       {/* Scroll hint */}
       <div className="pointer-events-none absolute bottom-8 left-1/2 z-30 -translate-x-1/2">
-        <div className="h-12 w-px animate-pulse bg-gradient-to-b from-transparent via-champagne/60 to-transparent" />
+        <div className="h-12 w-px animate-pulse bg-linear-to-b from-transparent via-champagne/60 to-transparent" />
       </div>
 
       {/* Drag affordance */}
