@@ -97,7 +97,7 @@ export default function Collection() {
       id="collection"
       className="relative overflow-hidden bg-noir py-32 md:py-44"
     >
-      <div className="mx-auto max-w-[1500px] px-6 md:px-12">
+      <div className="mx-auto max-w-375 px-6 md:px-12">
         {/* Heading */}
         <div className="col-heading mb-20 md:mb-28">
           <p className="mb-6 text-[10px] tracking-[0.5em] text-champagne uppercase">
@@ -159,7 +159,7 @@ export default function Collection() {
 
           {/* Featured stage */}
           <div className="col-stage relative order-1 md:order-2 md:w-[62%]">
-            <div className="relative aspect-[4/5] max-h-[75vh] w-full overflow-hidden md:aspect-[5/4]">
+            <div className="relative aspect-4/5 max-h-[75vh] w-full overflow-hidden md:aspect-5/4">
               <AnimatePresence mode="popLayout">
                 <motion.div
                   key={ring.id}
@@ -178,7 +178,7 @@ export default function Collection() {
                     placeholder="blur"
                     blurDataURL={BLUR}
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-noir/60 via-transparent to-transparent" />
+                  <div className="absolute inset-0 bg-linear-to-t from-noir/60 via-transparent to-transparent" />
                 </motion.div>
               </AnimatePresence>
 

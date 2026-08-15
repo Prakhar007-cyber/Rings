@@ -92,7 +92,7 @@ export default function Craft() {
       id="atelier"
       className="relative overflow-hidden bg-noir-warm py-32 md:py-48"
     >
-      <div className="mx-auto max-w-[1500px] px-6 md:px-12">
+      <div className="mx-auto max-w-375 px-6 md:px-12">
         {/* Heading */}
         <div className="craft-heading relative z-10 md:max-w-[60%]">
           <p className="mb-6 text-[10px] tracking-[0.5em] text-champagne uppercase">
@@ -115,7 +115,7 @@ export default function Craft() {
 
         {/* Editorial image composition */}
         <div className="relative mt-20 grid grid-cols-12 gap-6 md:mt-8">
-          <div className="craft-img-main relative col-span-12 aspect-[4/3] overflow-hidden will-change-[clip-path] md:col-span-6 md:col-start-6">
+          <div className="craft-img-main relative col-span-12 aspect-4/3 overflow-hidden will-change-[clip-path] md:col-span-6 md:col-start-6">
             <Image
               src={IMG.paveDetail}
               alt="Pavé diamond setting, macro detail"
@@ -169,7 +169,7 @@ export default function Craft() {
 
       {/* Ghost word */}
       <div className="pointer-events-none absolute top-10 right-0 select-none">
-        <span className="font-serif text-[20vw] leading-none font-light text-ivory/[0.025]">
+        <span className="font-serif text-[20vw] leading-none font-light text-ivory/2.5">
           MAIN
         </span>
       </div>
