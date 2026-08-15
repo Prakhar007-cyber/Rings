@@ -93,7 +93,7 @@ export default function Gold() {
       id="gold"
       className="relative h-screen overflow-hidden bg-ivory text-noir"
     >
-      <div className="mx-auto flex h-full max-w-[1500px] flex-col justify-center gap-8 px-6 md:flex-row md:items-center md:gap-16 md:px-12">
+      <div className="mx-auto flex h-full max-w-375 flex-col justify-center gap-8 px-6 md:flex-row md:items-center md:gap-16 md:px-12">
         {/* Left — editorial copy */}
         <div className="gold-heading relative z-10 pt-24 md:w-[42%] md:pt-0">
           <p className="mb-6 text-[10px] font-normal tracking-[0.5em] text-gold-deep uppercase">
@@ -127,7 +127,7 @@ export default function Gold() {
         </div>
 
         {/* Right — pinned image stack */}
-        <div className="relative aspect-[4/5] w-full max-h-[62vh] overflow-hidden md:max-h-[78vh] md:w-[46%]">
+        <div className="relative aspect-4/5 w-full max-h-[62vh] overflow-hidden md:max-h-[78vh] md:w-[46%]">
           {PIECES.map((p, i) => (
             <div key={p.title} className="gold-slide absolute inset-0 will-change-transform">
               <Image
@@ -161,7 +161,7 @@ export default function Gold() {
 
       {/* Oversized ghost word */}
       <div className="pointer-events-none absolute -bottom-6 left-0 select-none">
-        <span className="font-serif text-[24vw] leading-none font-light text-noir/[0.04]">
+        <span className="font-serif text-[24vw] leading-none font-light text-noir/4">
           AURUM
         </span>
       </div>

@@ -90,7 +90,7 @@ export default function Diamond() {
             }}
           />
         </div>
-        <div className="absolute inset-0 bg-gradient-to-t from-noir/70 via-transparent to-noir/50" />
+        <div className="absolute inset-0 bg-linear-to-t from-noir/70 via-transparent to-noir/50" />
       </div>
 
       {/* Phase 1 typography */}
